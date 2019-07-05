@@ -5,7 +5,7 @@ BODY
 
 #mainBody
 {
-	background-color: #008800;
+	background-color: #557A95;
 	width: 800px;
 	overflow: hidden;
 	
@@ -28,7 +28,7 @@ BODY
 	padding: 10px;	
 }
 
-#logo
+#profile_picture
 {
 	width: 100px;
 
@@ -103,9 +103,11 @@ BODY
 #mainContentContainer > iframe
 {	
 	margin-top: 10px;
-	width: 360px;
-	height: 202px;
-	margin-bottom: 10px; 
+	width: 500px;
+	height: 281px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	display: block;
 }
 
 #mainContentContainer > ul
