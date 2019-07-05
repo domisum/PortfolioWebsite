@@ -6,7 +6,7 @@ BODY
 #mainBody
 {
 	background-color: #557A95;
-	width: 800px;
+	width: 900px;
 	overflow: hidden;
 	
 	margin-top: 20px;
@@ -30,7 +30,7 @@ BODY
 
 #profile_picture
 {
-	width: 100px;
+	width: 200px;
 
 	float: left;	
 }
