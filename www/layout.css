@@ -5,7 +5,7 @@ BODY
 
 #mainBody
 {
-	background-color: #557A95;
+	background-color: #116466;
 	width: 900px;
 	overflow: hidden;
 	
@@ -53,7 +53,7 @@ BODY
 
 #mainContentContainer
 {
-	background-color: #E6E6E6;
+	background-color: #D6D6D6;
 	width: 620px;
 	min-height: 550px;
 	
@@ -69,13 +69,13 @@ BODY
 	color: #1e252d;	
 }
 
-#mainContentContainer > p
+p
 {
 	margin-top: 0px;
 	margin-bottom: 7px;	
 }
 
-#mainContentContainer > h1
+h1
 {
 	margin-top: 50px;
 	margin-left: 0px;
@@ -83,24 +83,23 @@ BODY
 	line-height: 0px;
 	
 	font-family: Verdana;
-	font-size: 25px;
+	font-size: 28px;
 	text-align: left;
 	color: #1e252d;	
 }
 
-#mainContentContainer > h2
+h2
 {
-	margin-left: 0px;
-	margin-top: 40px;
-	line-height: 5px;
+	margin-left: 10px;
+	margin-top: 10px;
 	
 	font-family: Verdana;
-	font-size: 18px;
+	font-size: 22px;
 	text-align: left;
 	color: #1e252d;
 }
 
-#mainContentContainer > iframe
+iframe
 {	
 	margin-top: 10px;
 	width: 500px;
@@ -110,7 +109,7 @@ BODY
 	display: block;
 }
 
-#mainContentContainer > ul
+ul
 {	
 	list-style-type: square;
 	padding-left: 1.7em;
@@ -121,6 +120,15 @@ BODY
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+.projectDiv
+{
+	box-shadow: 8px 8px #D9B08C;
+	background-color: #FFFFFF;
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
 #menuContainer

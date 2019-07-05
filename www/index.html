@@ -48,76 +48,88 @@
 				
 				<h1>Previous projects</h1>
 				
-				<h2>domisumReplay</h2>
-				<iframe src="https://www.youtube.com/embed/3AOCHInjQJA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<p>domisumReplay is a software project that generates YouTube videos of League of Legends pro player replays.</p>
-				<p>The architecture is split between server and client, the server finds and selects the replays, the client records and uploads them. 
-				This architectural split was chosen to allow multiple recordings by having multiple clients running at the same time.</p>
-				<p>Communication between client and server is handled via HTTP(S). Data is mainly sent in JSON format. Both the client and the server use Gson for JSON serialization. The traffic is securely encrypted using a HTTPS reverse proxy on the server.</p> 
-				<p>The server collects match and player information from the RiotAPI, with which it evaluates and selects interesting matches.
-				The match and player data is saved using MongoDB. Statistics gathered from the matches are cached using Redis. The size of the codebase is about 35k lines of code split into about 1000 classes.
-				Dependency management is performed by Maven. Dependency injections are done using Guice.</p>
-				<p>The client controls the League of Legends spectator client and the recording software OBS with simulated keypresses.</p>
-				<p>The application automatically generates video titles, thumbnails and descriptions for each video and highlights the most important events in them.</p>
-				<p>Displaying the images over the gameplay is accomplished using a transparent website displayed above the game footage. The site is programmed to fade in and fade out images it receives from the Java application.
-				The web server is written in Java as well.</p>
-				<p>Uploading the videos to YouTube is fully automated using the YouTube-Data-API and a mock YouTube browser client since some required features such as end screens and enabling monetization are not supported in the official API.
-				The high-level YouTube-API used in domisumReplay is available as open-source: <a href="https://github.com/domisum/YouTubeVideoUploadLib">YouTubeVideoUploadLib</a></p>
-				<p>The graphics used in the video and in the metadata (rune-page info, item build, skill order, and video thumbnail) are generated using a simple, self-written <a href="https://github.com/domisum/Snaporta">image library</a></p>
-				<p>The video above is one of the many videos this software project has generated.</p>
+				<div class="projectDiv">
+					<h2>domisumReplay</h2>
+					<iframe src="https://www.youtube.com/embed/3AOCHInjQJA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>domisumReplay is a software project that generates <a href="https://www.youtube.com/domisumReplay" target="_blank">YouTube videos</a> of League of Legends pro player replays.</p>
+					<p>The architecture is split between server and client, the server finds and selects the replays, the client records and uploads them. 
+					This architectural split was chosen to allow multiple recordings by having multiple clients running at the same time.</p>
+					<p>Communication between client and server is handled via HTTP(S). Data is mainly sent in JSON format. Both the client and the server use Gson for JSON serialization. The traffic is securely encrypted using a HTTPS reverse proxy on the server.</p> 
+					<p>The server collects match and player information from the RiotAPI, with which it evaluates and selects interesting matches.
+					The match and player data is saved using MongoDB. Statistics gathered from the matches are cached using Redis. The size of the codebase is about 35k lines of code split into about 1000 classes.
+					Dependency management is performed by Maven. Dependency injections are done using Guice.</p>
+					<p>The client controls the League of Legends spectator client and the recording software OBS with simulated keypresses.</p>
+					<p>The application automatically generates video titles, thumbnails and descriptions for each video and highlights the most important events in them.</p>
+					<p>Displaying the images over the gameplay is accomplished using a transparent website displayed above the game footage. The site is programmed to fade in and fade out images it receives from the Java application.
+					The web server is written in Java as well.</p>
+					<p>Uploading the videos to YouTube is fully automated using the YouTube-Data-API and a mock YouTube browser client since some required features such as end screens and enabling monetization are not supported in the official API.
+					The high-level YouTube-API used in domisumReplay is available as open-source: <a href="https://github.com/domisum/YouTubeVideoUploadLib" target="_blank">YouTubeVideoUploadLib</a></p>
+					<p>The graphics used in the video and in the metadata (rune-page info, item build, skill order, and video thumbnail) are generated using a simple, self-written <a href="https://github.com/domisum/Snaporta" target="_blank">image library</a></p>
+					<p>The video above is one of the many videos this software project has generated.</p>
+				</div>
 				
-				<h2>InfinityLoop</h2>
-				<p><a href="https://github.com/domisum/InfinityLoop">Infinity Loop</a> is a JavaFX clone of the popular game app with the same name. I programmed it as an exercise in creating GUIs and programming fast puzzle-solving algorithms.</p>
-				<p>The application has 1.2k lines of code and contains 19 classes.</p>
-				<p>The goal of the game is to solve levels by rotating tiles until all ends are connected. To rotate a tile, click it.</p>
-				<img src="images/projects/InfinityLoop.png" class ="projectImg" title="InfinityLoop screenshot" />
-				<p>To play the game you can download the source code from the link above and run the application from the main class MainGUI.java in your preferred IDE.
-				You can also download a pre-built executable from here: <a href="https://github.com/domisum/InfinityLoop/blob/master/bin/InfinityLoop.jar?raw=true">InfinityLoop.jar download</a></p>
-				<p>The buttons on the right have the following functionality: </p>
-				<ul>
-					<li>Folder: Load a board from a file</li>
-					<li>Floppy disk: Save the current board to a file</li>
-					<li>Shuffle arrows: Generate a new, random board</li>
-					<li>Light bulb: Solve the current board automatically</li>
-					<li>Big screen: Switch application to fullscreen mode</li>
-					<li>Windows: Switch application to windowed mode</li>
-				</ul>
+				<div class="projectDiv">
+					<h2>InfinityLoop</h2>
+					<p><a href="https://github.com/domisum/InfinityLoop" target="_blank">Infinity Loop</a> is a JavaFX clone of the popular game app with the same name. I programmed it as an exercise in creating GUIs and programming fast puzzle-solving algorithms.</p>
+					<p>The application has 1.2k lines of code and contains 19 classes.</p>
+					<p>The goal of the game is to solve levels by rotating tiles until all ends are connected. To rotate a tile, click it.</p>
+					<img src="images/projects/InfinityLoop.png" class ="projectImg" title="InfinityLoop screenshot" />
+					<p>To play the game you can download the source code from the link above and run the application from the main class MainGUI.java in your preferred IDE.
+					You can also download a pre-built executable from here: <a href="https://github.com/domisum/InfinityLoop/blob/master/bin/InfinityLoop.jar?raw=true" target="_blank">InfinityLoop.jar download</a></p>
+					<p>The buttons on the right have the following functionality: </p>
+					<ul>
+						<li>Folder: Load a board from a file</li>
+						<li>Floppy disk: Save the current board to a file</li>
+						<li>Shuffle arrows: Generate a new, random board</li>
+						<li>Light bulb: Solve the current board automatically</li>
+						<li>Big screen: Switch application to fullscreen mode</li>
+						<li>Windows: Switch application to windowed mode</li>
+					</ul>
 				
-				<p>The algorithm for solving the board is written recursively and has great performance even with big boards.</p>
+					<p>The algorithm for solving the board is written recursively and has great performance even with big boards.</p>
+				</div>
 				
 				<h1>Previous projects: Minecraft</h1>
 				<p>I have extensive experience working on Minecraft plugins, written in Java and using the Spigot/Bukkit-API. Some of the projects listed use internal NMS code. Here are a selected few of my projects:</p>
 				
-				<h2>Afflicted RPG</h2>
-				<iframe src="https://www.youtube.com/embed/4K4qefXvNbo?start=97" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<p>Afflicted is a RPG game mode set in a post-apocalyptic Minecraft world, overrun by zombies.</p>
-				<p>The plugin added many features to the game. It added weapons (including machine guns, sniper rifles, and flamethrowers) 
-				and randomly generated add-ons for the weapons (examples: grenade launcher, reduced reload duration, short timeframe of invulnerability, homing rockets and many more).</p>
-				<p>It also added NPCs and quests, which could be created and modified using simple JSON configuration files. Quests are created from components, which could give the player the task to talk to NPCs,
-				kill monsters or collect and deliver monster drops. Quests can have multiple paths and multiple endings. Conversations with NPCs sometimes give the player options to make a choice which they can accept by clicking a button in chat.
-				An example of this is shown in the screenshot below.</p>
-				<img src="images/projects/Afflicted1.jpg" class ="projectImg" title="Afflicted screenshot 1" />
-				<p>The game also includes other features to tie everything together: A party system, currency for upgrading add-ons, poisonous zombie corpses and a quest book with a quest tracker.</p>
-				<p>The players in the world would regularly fight hordes of zombies, which all had custom gear and special abilities. 
-				Commander zombies can summon reinforcements, Spitters can throw highly accurate potions at the players, Zappers can explode, Chargers run at the player to throw them in the air and Diggers dig into the ground to tunnel closer to the player.</p>
-				<img src="images/projects/Afflicted2.jpg" class ="projectImg" title="Afflicted screenshot 2" />
-				<p>Player status is saved using MongoDB, which allows the game to run on multiple game servers and sync up the player progress.</p>
-				<p>The plugin has 16.6k lines of code and 235 classes. It was developed for the server PocketPixels (Proprietary code).</p>
+				<div class="projectDiv">
+					<h2>Afflicted RPG</h2>
+					<iframe src="https://www.youtube.com/embed/4K4qefXvNbo?start=97" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>Afflicted is a RPG game mode set in a post-apocalyptic Minecraft world, overrun by zombies.</p>
+					<p>The plugin added many features to the game. It added weapons (including machine guns, sniper rifles, and flamethrowers) 
+					and randomly generated add-ons for the weapons (examples: grenade launcher, reduced reload duration, short timeframe of invulnerability, homing rockets and many more).</p>
+					<p>It also added NPCs and quests, which could be created and modified using simple JSON configuration files. Quests are created from components, which could give the player the task to talk to NPCs,
+					kill monsters or collect and deliver monster drops. Quests can have multiple paths and multiple endings. Conversations with NPCs sometimes give the player options to make a choice which they can accept by clicking a button in chat.
+					An example of this is shown in the screenshot below.</p>
+					<img src="images/projects/Afflicted1.jpg" class ="projectImg" title="Afflicted screenshot 1" />
+					<p>The game also includes other features to tie everything together: A party system, currency for upgrading add-ons, poisonous zombie corpses and a quest book with a quest tracker.</p>
+					<p>The players in the world would regularly fight hordes of zombies, which all had custom gear and special abilities. 
+					Commander zombies can summon reinforcements, Spitters can throw highly accurate potions at the players, Zappers can explode, Chargers run at the player to throw them in the air and Diggers dig into the ground to tunnel closer to the player.</p>
+					<img src="images/projects/Afflicted2.jpg" class ="projectImg" title="Afflicted screenshot 2" />
+					<p>Player status is saved using MongoDB, which allows the game to run on multiple game servers and sync up the player progress.</p>
+					<p>The plugin has 16.6k lines of code and 235 classes. It was developed for the server PocketPixels (Proprietary code).</p>
+				</div>
 				
-				<h2>ThroneGames</h2>
-				<iframe src="https://www.youtube.com/embed/GcVDnmc2RqI?start=545" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<p>ThroneGames is a minigame where you fight other players in a 1v1 tournament, the winners of each 1v1 advancing to the next round of 1v1s. Every round has different fighting equipment.</p>
-				<p>The plugin has 3.3k lines of code and was developed for the server TheParkMC (Proprietary code).</p>
+				<div class="projectDiv">
+					<h2>ThroneGames</h2>
+					<iframe src="https://www.youtube.com/embed/GcVDnmc2RqI?start=545" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>ThroneGames is a minigame where you fight other players in a 1v1 tournament, the winners of each 1v1 advancing to the next round of 1v1s. Every round has different fighting equipment.</p>
+					<p>The plugin has 3.3k lines of code and was developed for the server TheParkMC (Proprietary code).</p>
+				</div>
 				
-				<h2>UHCGames</h2>
-				<iframe src="https://www.youtube.com/embed/0sYgUf1ZTws?start=84" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<p>UHCGames is a mix between UHC and SurvivalGames.</p>
-				<p>The plugin has 4.0k lines of code and was developed for the server TheParkMC (Proprietary code).</p>
+				<div class="projectDiv">
+					<h2>UHCGames</h2>
+					<iframe src="https://www.youtube.com/embed/0sYgUf1ZTws?start=84" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>UHCGames is a mix between UHC and SurvivalGames.</p>
+					<p>The plugin has 4.0k lines of code and was developed for the server TheParkMC (Proprietary code).</p>
+				</div>
 				
-				<h2>ShotEm</h2>
-				<iframe src="https://www.youtube.com/embed/pQep_i8N2I4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<p>ShotEm is a simple minigame requiring the player to shoot NPCs that spawn further and further away.</p>
-				<p>The plugin has 1.8k lines of code and was developed for the server TheParkMC (Proprietary code). The skins ids of the target players and the scores are stored using MySQL.</p>
+				<div class="projectDiv">
+					<h2>ShotEm</h2>
+					<iframe src="https://www.youtube.com/embed/pQep_i8N2I4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>ShotEm is a simple minigame requiring the player to shoot NPCs that spawn further and further away.</p>
+					<p>The plugin has 1.8k lines of code and was developed for the server TheParkMC (Proprietary code). The skins ids of the target players and the scores are stored using MySQL.</p>
+				</div>
 				
 			</div>
 			
