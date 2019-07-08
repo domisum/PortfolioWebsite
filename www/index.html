@@ -79,7 +79,7 @@
 					This architectural split was chosen to allow multiple recordings by having multiple clients running at the same time.</p>
 					<p>Communication between client and server is handled via HTTP(S). Data is mainly sent in JSON format. Both the client and the server use Gson for JSON serialization. The traffic is securely encrypted using a HTTPS reverse proxy on the server.</p> 
 					<p>The server collects match and player information from the RiotAPI, with which it evaluates and selects interesting matches.
-					The match and player data is saved using MongoDB. Statistics gathered from the matches are cached using Redis. The size of the codebase is about 35k lines of code split into about 1000 classes.
+					The match and player data is saved using MongoDB. Statistics gathered from the matches are cached using Redis. The size of the codebase is about 29k lines of code split into about 800 classes.
 					Dependency management is performed by Maven. Dependency injections are done using Guice.</p>
 					<p>The client controls the League of Legends spectator client and the recording software OBS with simulated keypresses.</p>
 					<p>The application automatically generates video titles, thumbnails and descriptions for each video and highlights the most important events in them.</p>
