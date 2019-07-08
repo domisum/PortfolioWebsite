@@ -1,12 +1,29 @@
+:root
+{
+	--color-body: #05386B;
+	
+	--color-main-body: #379683;
+	--color-dark-background: #333333;
+	--color-dark-background-font: #E6E6E6;
+	
+	--color-menu-item: #BABABA;
+	--color-menu-item-hover: #919191;
+	
+	--color-main-content-container: #D6D6D6;
+	
+	--color-project-background: #FFFFFF;
+	--color-project-shadow: #8EE4AF;
+}
+
 BODY
 {
-	background-color: #CFCFCF;	
+	background-color: var(--color-body);	
 }
 
 #mainBody
 {
-	background-color: #116466;
-	width: 900px;
+	background-color: var(--color-main-body);
+	width: 850px;
 	overflow: hidden;
 	
 	margin-top: 20px;
@@ -19,54 +36,101 @@ BODY
 	text-align: center;	
 }
 
-#logoContainer
+#header
 {
-	background-color: #333333;
-	
 	margin: 10px;
+	min-height: 10px;
+	overflow: hidden;
+}
+
+#profilePictureContainer
+{
+	background-color: var(--color-dark-background);
+	
+	margin-right: 10px;
 	float: left;
 	padding: 10px;	
 }
 
-#profile_picture
+#profilePicture
 {
 	width: 200px;
 
 	float: left;	
 }
 
-#header
+#title
 {
-	background-color: #333333;
-	width: 630px;
+	background-color: var(--color-dark-background);
 	
-	float: right;
-	margin: 10px;
-	margin-left: 0px;
 	padding: 10px;
 	
-	font-family: "Lucida Console";
-	color: #E6E6E6;
-	font-size: 20px;
+	font-family: "Courier New";
+	color: var(--color-dark-background-font);
+	font-size: 24px;
 	text-align: center;	
+	
+	overflow: hidden;
 }
+
+#menuContainer
+{
+	background-color: var(--color-dark-background);
+	
+	margin-top: 10px;
+	
+	overflow: hidden;
+}
+
+.menuItem
+{	
+	background-color: var(--color-menu-item);
+	width: 40px;
+	height: 40px;
+	
+	margin: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	display: inline-block; 
+	vertical-align: top;
+	
+	position: relative;
+}
+
+.menuImg
+{
+	width: 30px;
+	
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	
+	opacity: 0.9;
+}
+
+.menuItem:hover
+{
+	background-color: var(--color-menu-item-hover);
+}
+
 
 #mainContentContainer
 {
-	background-color: #D6D6D6;
-	width: 620px;
-	min-height: 550px;
+	background-color: var(--color-main-content-container);
+	width: 0 auto;
 	
-	margin-right: 10px;
-	margin-bottom: 10px;
+	margin: 10px;
 	padding: 15px;
 	padding-bottom: 5px;
 	float: right;
 	
 	font-family: Georgia;
-	font-size: 15px;
+	font-size: 16px;
 	text-align: justify;
-	color: #1e252d;	
 }
 
 p
@@ -85,7 +149,16 @@ h1
 	font-family: Verdana;
 	font-size: 28px;
 	text-align: left;
-	color: #1e252d;	
+}
+
+.projectDiv
+{
+	box-shadow: 8px 8px var(--color-project-shadow);
+	background-color: var(--color-project-background);
+	
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
 h2
@@ -96,103 +169,40 @@ h2
 	font-family: Verdana;
 	font-size: 22px;
 	text-align: left;
-	color: #1e252d;
 }
 
 iframe
 {	
-	margin-top: 10px;
-	width: 500px;
-	height: 281px;
+	width: 700px;
+	height: 394px;
+	
+	display: block;
 	margin: 0 auto;
 	margin-bottom: 15px;
-	display: block;
 }
 
 ul
 {	
 	list-style-type: square;
-	padding-left: 1.7em;
+	padding-left: 30px;
 }
 
 .projectImg
 {
 	width: 100%;
+	
 	padding-top: 20px;
 	padding-bottom: 20px;
-}
-
-.projectDiv
-{
-	box-shadow: 8px 8px #D9B08C;
-	background-color: #FFFFFF;
-	padding: 10px;
-	margin-top: 30px;
-	margin-bottom: 10px;
-}
-
-#menuContainer
-{
-	background-color: #333333;
-	
-	float: right;
-	margin: 10px;
-	margin-top : 0px;
-	padding: 10px;
-	padding-bottom: 0px;
-}
-
-.menuItem
-{	
-	background-color: #BABABA;
-	width: 50px;
-	height: 50px;
-	
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-	
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-
-.menuImg
-{
-	width: 40px;
-	
-	padding: 5px;
-	
-	opacity: 0.9;
-}
-
-.menuItem:hover
-{
-	background-color: #919191;
-}
-
-.menuHeader
-{	
-	height: 40px;
-	
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	
-	font-family: Courier New;
-	font-style: italic;
-	font-size: 25px;
-	text-align: center;
 }
 
 #footer
 {	
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 30px;
 	
 	font-family: Courier New;
 	font-size: 12px;
 	text-align: center;
-	color: #345d79;
+	color: var(--color-dark-background-font);
 }
